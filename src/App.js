@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import GetWeather from "./components/GetWeather";
 
 const App = () => {
   const [lat, setLat] = useState([]);
@@ -23,7 +24,11 @@ const App = () => {
     });
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <GetWeather weatherData={data} />
+    </div>
+  );
 };
 
 export default App;
