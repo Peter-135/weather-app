@@ -7,6 +7,7 @@ const App = () => {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -19,6 +20,7 @@ const App = () => {
         )
         .then((response) => {
           setData(response);
+          setLoading(false);
           console.log(response);
         });
     });
@@ -26,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <GetWeather weatherData={data} />
+      {loading ? <h1>Loading...</h1> : <GetWeather weatherData={data} />}
     </div>
   );
 };

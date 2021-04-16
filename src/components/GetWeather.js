@@ -1,35 +1,38 @@
 import React from "react";
 
 const GetWeather = ({ weatherData }) => {
+  const data = weatherData.data;
+  const mainData = weatherData.data.main;
+  const dataSys = data.sys;
+  const dataWind = data.wind;
+
   return (
     <div>
       <h1>Weather Forecast</h1>
       <p>
-        The current weather is {weatherData.data.weather[0].main} and the
-        description for the weather is {weatherData.data.weather[0].description}
+        The current weather is {data.weather[0].main} and the description for
+        the weather is {data.weather[0].description}
       </p>
       <p>
-        The current temperature is {weatherData.data.main.temp}, whilst the
-        minimum and maximum temperatures are {weatherData.data.main.temp_min}{" "}
-        and {weatherData.data.main.temp_max}
+        The current temperature is {mainData.temp}, whilst the minimum and
+        maximum temperatures are {mainData.temp_min} and {mainData.temp_max}
       </p>
-      <p>The temperature feels like {weatherData.data.main.feels_like}</p>
+      <p>The temperature feels like {mainData.feels_like}</p>
       <p>
-        The wind speed and degrees is {weatherData.data.wind.speed} and{" "}
-        {weatherData.data.wind.deg}, respectively
-      </p>
-      <p>
-        The sunrise and sunset values are {weatherData.data.sys.sunrise} and{" "}
-        {weatherData.data.sys.sunset}, respectively
+        The wind speed and degrees is {dataWind.speed} and {dataWind.deg},
+        respectively
       </p>
       <p>
-        The visibility is {weatherData.data.visibility}, the humidity is{" "}
-        {weatherData.data.main.humidity} and the pressure is{" "}
-        {weatherData.data.main.pressure}
+        The sunrise and sunset values are {dataSys.sunrise} and {dataSys.sunset}
+        , respectively
       </p>
       <p>
-        The country code is {weatherData.data.sys.country} and the timezone is{" "}
-        {weatherData.data.timezone}
+        The visibility is {data.visibility}, the humidity is {mainData.humidity}{" "}
+        and the pressure is {mainData.pressure}
+      </p>
+      <p>
+        The country code is {dataSys.country} and the timezone is{" "}
+        {data.timezone}
       </p>
     </div>
   );
