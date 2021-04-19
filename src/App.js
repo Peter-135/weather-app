@@ -27,7 +27,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App myBackground">
       {loading ? <h1>Loading...</h1> : <GetWeather weatherData={data} />}
     </div>
   );

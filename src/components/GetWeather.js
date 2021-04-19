@@ -50,46 +50,46 @@ const GetWeather = ({ weatherData }) => {
     <div>
       <h1>Weather Forecast </h1>
       <button onClick={convert}>Convert to {isCelsius ? "F" : "C"}</button>
-
+      {/* <img
+        src="https://popuppainting.com/wp-content/uploads/2018/08/blue-sky.jpg"
+        alt="Weather background"
+      /> */}
       <img
         src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
         alt="Weather description"
       />
+      <p>Current weather: {actualData.weather[0].main}</p>{" "}
+      <p>Weather Description: {actualData.weather[0].description}</p>
       <p>
-        The current weather is {actualData.weather[0].main} and the description
-        for the weather is {actualData.weather[0].description}
-      </p>
-      <p>
-        The current temperature is{" "}
+        Current Temperature:{" "}
         {isCelsius
           ? convertToCelsius(mainData.temp)
           : convertToFahrenheit(mainData.temp)}
-        , whilst the minimum and maximum temperatures are{" "}
+        , Minimum Temperature{" "}
         {isCelsius
           ? convertToCelsius(mainData.temp_min)
-          : convertToFahrenheit(mainData.temp_min)}{" "}
-        and{" "}
+          : convertToFahrenheit(mainData.temp_min)}
+        , Maximum Temperature:{" "}
         {isCelsius
           ? convertToCelsius(mainData.temp_max)
           : convertToFahrenheit(mainData.temp_max)}
       </p>
       <p>
-        The temperature feels like{" "}
+        Temperature Feels Like{" "}
         {isCelsius
           ? convertToCelsius(mainData.feels_like)
           : convertToFahrenheit(mainData.feels_like)}
       </p>
       <p>
-        The wind speed and degrees is {dataWind.speed} and {dataWind.deg},
-        respectively
+        Wind Speed and Degrees is {dataWind.speed} and {dataWind.deg}
       </p>
       <p>
         The sunrise and sunset values are {dataSys.sunrise} and {dataSys.sunset}
         , respectively
       </p>
       <p>
-        The visibility is {actualData.visibility}, the humidity is{" "}
-        {mainData.humidity} and the pressure is {mainData.pressure}
+        Visibility: {actualData.visibility}, Humidity: {mainData.humidity} and
+        the pressure is {mainData.pressure}
       </p>
       <p>
         The country code is {dataSys.country} and the timezone is{" "}
