@@ -6,18 +6,34 @@ const GetWeather = ({ weatherData }) => {
   const dataSys = weatherData.data.sys;
   const dataWind = weatherData.data.wind;
   const iconCode = weatherData.data.weather[0].icon;
+  const temperature = weatherData.data.main;
+  //const [temperature, setTemperature] = useState(weatherData.data.main);
+  // C = K - 273.15
+
+  const convertToCelsius = function (temperature) {
+    return (temperature - 273.15).toFixed(2);
+  };
+
+  const convertToFahrenheit = function (temperature) {
+    return ((temperature - 273.15) * (9 / 5) + 32).toFixed(2);
+  };
+
+  // {convertToCelsius(temperature.temp)}{" "}
+  // {convertToFahrenheit(temperature.temp)}
 
   return (
     <div>
       <h1>Weather Forecast </h1>
       <img src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`} />
       <p>
+        {convertToCelsius(temperature.temp)}{" "}
+        {convertToFahrenheit(temperature.temp)}
         The current weather is {actualData.weather[0].main} and the description
         for the weather is {actualData.weather[0].description}
       </p>
       <p>
-        The current temperature is {mainData.temp}, whilst the minimum and
-        maximum temperatures are {mainData.temp_min} and {mainData.temp_max}
+        The current temperature is {mainData.temp} &deg;C , whilst the minimum
+        and maximum temperatures are {mainData.temp_min} and {mainData.temp_max}
       </p>
       <p>The temperature feels like {mainData.feels_like}</p>
       <p>
@@ -41,5 +57,3 @@ const GetWeather = ({ weatherData }) => {
 };
 
 export default GetWeather;
-
-//somehow use props to displayw weather from api
