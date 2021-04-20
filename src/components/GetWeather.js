@@ -8,8 +8,6 @@ const GetWeather = ({ weatherData }) => {
   const dataWind = weatherData.data.wind;
   const iconCode = weatherData.data.weather[0].icon;
   const temperature = weatherData.data.main;
-  // const [temperature, setTemperature] = useState(weatherData.data.main);
-  // C = K - 273.15
 
   const [isCelsius, setIsCelsius] = useState(false);
 
@@ -23,18 +21,6 @@ const GetWeather = ({ weatherData }) => {
   const convertToFahrenheit = function (temperature) {
     return ((temperature - 273.15) * (9 / 5) + 32).toFixed(2);
   };
-
-  // localStorage.setItem("changeCelsius", isCelsius);
-
-  // {convertToCelsius(temperature.temp)}{" "}
-  // {convertToFahrenheit(temperature.temp)}
-
-  // useEffect(() => {
-  //   const changeData = localStorage.getItem("convert-degress-fahrenheit");
-  //   if (changeData) {
-  //     setIsCelsius(changeData);
-  //   }
-  // }, []);
 
   useEffect(() => {
     const changeData = localStorage.getItem("isCelsius");
@@ -51,10 +37,6 @@ const GetWeather = ({ weatherData }) => {
       <button className="button" onClick={convert}>
         Convert to {isCelsius ? "F" : "C"}
       </button>
-      {/* <img
-        src="https://popuppainting.com/wp-content/uploads/2018/08/blue-sky.jpg"
-        alt="Weather background"
-      /> */}
       <img
         src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
         alt="Weather description"
@@ -110,10 +92,3 @@ const GetWeather = ({ weatherData }) => {
 };
 
 export default GetWeather;
-
-{
-  /* <p>
-The sunrise and sunset values are {dataSys.sunrise} and {dataSys.sunset}
-, respectively
-</p> */
-}
