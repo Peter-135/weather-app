@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react-dom";
 
 const GetWeather = ({ weatherData }) => {
   const actualData = weatherData.data;
@@ -49,7 +48,9 @@ const GetWeather = ({ weatherData }) => {
   return (
     <div>
       <h1>Weather Forecast </h1>
-      <button onClick={convert}>Convert to {isCelsius ? "F" : "C"}</button>
+      <button className="button" onClick={convert}>
+        Convert to {isCelsius ? "F" : "C"}
+      </button>
       {/* <img
         src="https://popuppainting.com/wp-content/uploads/2018/08/blue-sky.jpg"
         alt="Weather background"
@@ -58,45 +59,61 @@ const GetWeather = ({ weatherData }) => {
         src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
         alt="Weather description"
       />
-      <p>Current weather: {actualData.weather[0].main}</p>{" "}
-      <p>Weather Description: {actualData.weather[0].description}</p>
-      <p>
-        Current Temperature:{" "}
-        {isCelsius
-          ? convertToCelsius(mainData.temp)
-          : convertToFahrenheit(mainData.temp)}
-        , Minimum Temperature{" "}
-        {isCelsius
-          ? convertToCelsius(mainData.temp_min)
-          : convertToFahrenheit(mainData.temp_min)}
-        , Maximum Temperature:{" "}
-        {isCelsius
-          ? convertToCelsius(mainData.temp_max)
-          : convertToFahrenheit(mainData.temp_max)}
-      </p>
-      <p>
-        Temperature Feels Like{" "}
-        {isCelsius
-          ? convertToCelsius(mainData.feels_like)
-          : convertToFahrenheit(mainData.feels_like)}
-      </p>
-      <p>
-        Wind Speed and Degrees is {dataWind.speed} and {dataWind.deg}
-      </p>
-      <p>
-        The sunrise and sunset values are {dataSys.sunrise} and {dataSys.sunset}
-        , respectively
-      </p>
-      <p>
-        Visibility: {actualData.visibility}, Humidity: {mainData.humidity} and
-        the pressure is {mainData.pressure}
-      </p>
-      <p>
-        The country code is {dataSys.country} and the timezone is{" "}
-        {actualData.timezone}
-      </p>
+      <div className="container-1">
+        <div className="Box-1">
+          <p>Weather: </p>
+          <p>{actualData.weather[0].main} </p>
+        </div>
+        <div className="box-2">
+          <p>Description:</p>
+          <p> {actualData.weather[0].description}</p>{" "}
+        </div>
+        <div className="Box-3">
+          <p>
+            Current Temp:{" "}
+            {isCelsius
+              ? convertToCelsius(mainData.temp)
+              : convertToFahrenheit(mainData.temp)}
+          </p>
+          <p>
+            Feels Like:{" "}
+            {isCelsius
+              ? convertToCelsius(mainData.feels_like)
+              : convertToFahrenheit(mainData.feels_like)}
+          </p>
+        </div>
+        <div className="Box-4">
+          <p>
+            Min Temp:{" "}
+            {isCelsius
+              ? convertToCelsius(mainData.temp_min)
+              : convertToFahrenheit(mainData.temp_min)}{" "}
+          </p>
+          <p>
+            Max Temp:{" "}
+            {isCelsius
+              ? convertToCelsius(mainData.temp_max)
+              : convertToFahrenheit(mainData.temp_max)}
+          </p>
+        </div>
+        <div className="Box-5">
+          <p>Wind Speed: </p>
+          <p>{dataWind.speed}m/s</p>
+        </div>
+        <div className="Box-6">
+          <p>Humidity:</p>
+          <p> {mainData.humidity}%</p>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default GetWeather;
+
+{
+  /* <p>
+The sunrise and sunset values are {dataSys.sunrise} and {dataSys.sunset}
+, respectively
+</p> */
+}
