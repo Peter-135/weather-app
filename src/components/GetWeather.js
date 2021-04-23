@@ -66,38 +66,45 @@ const GetWeather = ({ weatherData }) => {
       </div>
       <div className="right-side">
         <div className="box-6">
-          <div className="practice">
-            <img
-              src="https://orioni.co/nmedia/png/humidity-4401.png"
-              alt="Humidity-icon"
-            />
-          </div>
-          <p>Humidity</p>
+          <p>
+            <div className="practice">
+              <img
+                src="
+              https://weather-app2.netlify.app/img/humidity.png"
+                alt="Humidity-icon"
+              />
+            </div>
+            Humidity
+          </p>
           <h1> {mainData.humidity}%</h1>
         </div>
         <div className="box-7">
-          <div className="practice">
-            <img
-              src="https://img.icons8.com/ios/452/atmospheric-pressure.png"
-              alt="air-pressure-icon"
-            />
-          </div>
-          <p>Atmospheric Pressure</p>
+          <p>
+            {" "}
+            <div className="practice">
+              <img
+                src="https://weather-app2.netlify.app/img/air-pressure.png"
+                alt="air-pressure-icon"
+              />
+            </div>
+            Atmospheric Pressure
+          </p>
           <h1>
             {temperature.pressure} {""}hPa
           </h1>
         </div>
         <div className="box-8">
-          <div className="practice">
-            <img
-              src={`https://static.thenounproject.com/png/1057070-200.png 
+          <p>
+            {" "}
+            <div className="practice">
+              <img
+                src={`https://image.flaticon.com/icons/png/512/191/191055.png
               `}
-              alt="Wind-icon"
-            />
-
-            {/* https://static.thenounproject.com/png/1057070-200.png */}
-          </div>
-          <p>Wind Speed </p>
+                alt="Wind-icon"
+              />
+            </div>{" "}
+            Wind Speed
+          </p>
           <h1>
             {dataWind.speed} {""} m/s
           </h1>
