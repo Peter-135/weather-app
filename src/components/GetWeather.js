@@ -33,6 +33,22 @@ const GetWeather = ({ weatherData }) => {
 
   // https://static.thenounproject.com/png/1057070-200.png
 
+  /*   https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80  CLOUDY */
+
+  /* https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg beautiful SUNSET */
+
+  /* https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg  RAINY*/
+
+  // if ({actualData.weather[0].description}.includes("clear")) {
+  //   return url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg")
+  //  }
+  //   if ({actualData.weather[0].description}.includes("rain")) {
+  //   return url("https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg")
+  // }
+  // if ({actualData.weather[0].description}.includes("cloud")) {
+  //   return url("https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg")
+  // }
+
   return (
     <div>
       <div className="left-side">
