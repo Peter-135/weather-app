@@ -1,12 +1,28 @@
 body {
-  background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
   font-size: 20px;
   text-align: center;
+
+  /* background-position: 100px 200px; */
+}
+.background {
+  width: 100%;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  /* background-position: 100px 200px; */
+}
+
+.clearWeather {
+  background-image: url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+}
+
+.rainyWeather {
+  background-image: url("https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg");
+}
+
+.cloudyWeather {
+  background-image: url("https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
 }
 
 /*   https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80  cloudy */
@@ -16,6 +32,7 @@ body {
 /* https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg  rainy*/
 
 h1,
+h2,
 p {
   color: #ffffff;
 }
@@ -28,23 +45,60 @@ p {
   display: inline-flex;
   flex-direction: column;
   float: left;
+  /* background-color: purple; */
+  align-items: baseline;
 }
 
 .left-side div {
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   width: 100%;
   /* border-bottom: 1px rgba(242, 242, 242, 0.2) solid; */
-  /* background-color: rgba(115, 186, 230, 0.2); */
 }
+
+h2 {
+  line-height: 0;
+}
+
+.box-2 img {
+  width: 100px;
+  height: 70px;
+}
+
+.box-2 {
+  background-color: none;
+}
+
+/* 
+.left-side div.box-1 {
+  background-color: pink;
+}
+
+.left-side div.box-2 {
+  background-color: red;
+}
+
+.left-side div.box-3 {
+  background-color: blue;
+}
+
+.left-side div.box-4 {
+  background-color: green;
+}
+
+.left-side div.box-5 {
+  background-color: orange;
+} */
 
 .right-side {
   display: inline-flex;
   flex-direction: column;
   float: right;
+  margin-right: 40px;
 }
 
 .right-side div {
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
+  /* margin-right: 20px; */
   /* border-bottom: 1px rgba(242, 242, 242, 0.2) solid; */
   /* background-color: rgba(115, 186, 230, 0.2); */
   /* background-image: url("../src/images/wind-icon.png"); */
@@ -65,14 +119,28 @@ p {
   flex-direction: row;
   justify-content: space-around;
   align-items: stretch;
-  margin-top: 20px;
+  margin-top: 150px;
+  background-color: none;
 }
 
-.bottom div {
-  padding: 27px 70px;
-  /* width: 100%; */
-  /* border-right: 1px rgba(242, 242, 242, 0.2) solid;
+/* .bottom div {
+  padding: 10px 40px 10px 40px; */
+/* background: red; */
+/* width: 100%; */
+/* border-right: 1px rgba(242, 242, 242, 0.2) solid;
   background-color: rgba(115, 186, 230, 0.2);  */
+/* } */
+
+.box-10,
+.box-11,
+.box-12 {
+  padding: 10px 40px 30px 40px;
+  background-color: none;
+}
+
+.box-9 {
+  padding: 10px 28px 30px 28px;
+  background-color: none;
 }
 
 .bottom div:hover {
@@ -86,15 +154,14 @@ p {
 }
 
 .bottom div:hover h1 {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 button:hover {
   background-color: rgba(174, 48, 219, 0.5);
 }
 
-/* 
-.bottom div.box-9 {
+/* .bottom div.box-9 {
   box-shadow: 10px 10px 15px red;
 }
 
@@ -106,9 +173,21 @@ button:hover {
   box-shadow: 10px 10px 15px yellow;
 } */
 
-.left-side div h1,
+.left-side div h1 {
+  font-size: 25px;
+  line-height: 0.2;
+}
+
 .right-side div h1 {
-  font-size: 30px;
+  font-size: 25px;
+  line-height: 0.2;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.left-side div h2 {
+  font-size: 40px;
+  font-weight: 900;
 }
 
 .left-side div p,
@@ -128,8 +207,9 @@ img {
 }
 
 .bottom div h1 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 900;
+  line-height: 0.5;
 }
 
 div div p div {
