@@ -43,7 +43,7 @@ const GetWeather = ({ weatherData }) => {
       return "cloudyWeather";
     } else if (weatherCondition.includes("clear")) {
       return "clearWeather";
-    } else if (weatherCondition.includes("rainy")) {
+    } else if (weatherCondition.includes("rain")) {
       return "rainyWeather";
     }
   };
@@ -55,7 +55,7 @@ const GetWeather = ({ weatherData }) => {
         "https://cdn2.iconfinder.com/data/icons/spring-flat-11/272/spring-cloud-weather-database-network-upload-download-256.png";
     } else if (iconCode == "01d") {
       iconUrl =
-        " https: //icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png";
+        "https: //icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png";
     } else if (iconCode == "09d" || iconCode == "10d") {
       iconUrl =
         "https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather05-512.png";
