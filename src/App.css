@@ -25,12 +25,6 @@ body {
   background-image: url("https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
 }
 
-/*   https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80  cloudy */
-
-/* https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg beautiful sunset */
-
-/* https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg  rainy*/
-
 h1,
 h2,
 p {
@@ -45,7 +39,7 @@ p {
   display: inline-flex;
   flex-direction: column;
   float: left;
-  /* background-color: purple; */
+
   align-items: baseline;
 }
 
@@ -68,27 +62,6 @@ h2 {
   background-color: none;
 }
 
-/* 
-.left-side div.box-1 {
-  background-color: pink;
-}
-
-.left-side div.box-2 {
-  background-color: red;
-}
-
-.left-side div.box-3 {
-  background-color: blue;
-}
-
-.left-side div.box-4 {
-  background-color: green;
-}
-
-.left-side div.box-5 {
-  background-color: orange;
-} */
-
 .right-side {
   display: inline-flex;
   flex-direction: column;
@@ -98,10 +71,6 @@ h2 {
 
 .right-side div {
   padding: 10px 10px 10px 10px;
-  /* margin-right: 20px; */
-  /* border-bottom: 1px rgba(242, 242, 242, 0.2) solid; */
-  /* background-color: rgba(115, 186, 230, 0.2); */
-  /* background-image: url("../src/images/wind-icon.png"); */
 }
 
 .button {
@@ -110,8 +79,6 @@ h2 {
   padding: 10px 32px;
   font-size: 20px;
 }
-
-/* 230, 250, 255, */
 
 .bottom {
   display: flex;
@@ -122,14 +89,6 @@ h2 {
   margin-top: 150px;
   background-color: none;
 }
-
-/* .bottom div {
-  padding: 10px 40px 10px 40px; */
-/* background: red; */
-/* width: 100%; */
-/* border-right: 1px rgba(242, 242, 242, 0.2) solid;
-  background-color: rgba(115, 186, 230, 0.2);  */
-/* } */
 
 .box-10,
 .box-11,
@@ -145,7 +104,6 @@ h2 {
 
 .bottom div:hover {
   box-shadow: 10px 10px 30px rgba(20, 20, 20, 1);
-  /* border-right: 1px rgba(242, 242, 242, 0.2) solid; */
   background-color: none;
 }
 
@@ -160,18 +118,6 @@ h2 {
 button:hover {
   background-color: rgba(174, 48, 219, 0.5);
 }
-
-/* .bottom div.box-9 {
-  box-shadow: 10px 10px 15px red;
-}
-
-.bottom div.box-10 {
-  box-shadow: 10px 10px 15px green;
-}
-
-.bottom div.box-11 {
-  box-shadow: 10px 10px 15px yellow;
-} */
 
 .left-side div h1 {
   font-size: 25px;
@@ -215,5 +161,3 @@ img {
 div div p div {
   display: inline-block;
 }
-
-/* div div p div */

@@ -31,12 +31,6 @@ const GetWeather = ({ weatherData }) => {
     localStorage.setItem("isCelsius", JSON.stringify(isCelsius));
   });
 
-  /*   https://images.unsplash.com/photo-1534358594138-6955f589fa24?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80  CLOUDY */
-
-  /* https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg beautiful SUNSET */
-
-  /* https://ak.picdn.net/shutterstock/videos/17816047/thumb/1.jpg  RAINY*/
-
   const weatherImage = function () {
     const weatherCondition = actualData.weather[0].description;
     if (weatherCondition.includes("cloud")) {
@@ -50,33 +44,19 @@ const GetWeather = ({ weatherData }) => {
 
   const getWeatherIcon = (iconCode) => {
     let iconUrl = null;
-    if (iconCode == "02d" || iconCode == "03d" || iconCode == "04d") {
+    if (iconCode === "02d" || iconCode === "03d" || iconCode === "04d") {
       iconUrl =
         "https://cdn2.iconfinder.com/data/icons/spring-flat-11/272/spring-cloud-weather-database-network-upload-download-256.png";
-    } else if (iconCode == "01d") {
+    } else if (iconCode === "01d") {
       iconUrl =
         "https: //icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png";
-    } else if (iconCode == "09d" || iconCode == "10d") {
+    } else if (iconCode === "09d" || iconCode === "10d") {
       iconUrl =
         "https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather05-512.png";
     }
 
     return iconUrl;
   };
-
-  //cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather01-512.png
-
-  // https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather05-512.png
-
-  // RAINY ICON
-
-  // https: //icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-weather-clear-icon.png
-
-  //  SUNNY ICON
-
-  // https://cdn2.iconfinder.com/data/icons/spring-flat-11/272/spring-cloud-weather-database-network-upload-download-256.png
-
-  // THE ABOVE LINK IS CLOUDY ICON I WILL BE USING, PUT IT BACK WHEN I'M DONE!!!
 
   return (
     <div className={`background ${weatherImage()}`}>
